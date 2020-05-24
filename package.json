@@ -1,0 +1,12 @@
+{
+  "name": "audio_electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^9.0.0"
+  }
+}
