@@ -17,15 +17,25 @@ function play() {
   music.play();
 }
 
-// 巻き戻し停止
-function stop() {
-  music.pause();
+// 巻き戻し
+function repeat() {
   music.currentTime = 0;
 }
 
 // 一時停止
 function pause() {
     music.pause();
-  }
+}
+
+// 曲送り
+function next() {
+  load("./music/Rally Go Round.mp3");
+}
+
+// 曲読み込み
+function load(music_path) {
+  music.src = music_path;
+  music.load();
+}
 
 init();
