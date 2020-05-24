@@ -1,49 +1,19 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8" />
-  <title>sample</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="audio.js"></script>\
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title> audio </title>
+  </head>
 
-<body>
-  <button onclick="stop()">巻き戻し停止</button>
-  <button onclick="pause()">一時停止</button>
-  <button onclick="play()">再生</button>
-
-  <script language="javascript" type="text/javascript">
-    var music = new Audio();
-
-    function init() {
-      music.preload = "auto";
-      music.src = "./07 メイドノココロハ アヤツリドール.mp3";
-      music.load();
-
-      music.addEventListener("ended", function () {
-        music.currentTime = 0;
-        music.play();
-      }, false);
-    }
-
-    // 再生
-    function play() {
-      music.loop = true;
-      music.play();
-    }
-
-    // 巻き戻し停止
-    function stop() {
-      music.pause();
-      music.currentTime = 0;
-    }
-
-    // 一時停止
-    function pause() {
-        music.pause();
-      }
-
-    init();
-  </script>
-</body>
+  <body>
+    <div align="center">
+      <i class="fas fa-step-backward" onclick="stop()"></i>
+      <i class="fas fa-pause" onclick="pause()"></i>
+      <i class="fas fa-play" onclick="play()"></i>
+    </div>
+  </body>
 
 </html>
